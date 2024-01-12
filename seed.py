@@ -1,9 +1,8 @@
 from models import Pet,db,Owner
-import app
+from app import app
 pet_data = {
     'name': 'Jojo',
-    'owner_id': 1,
-    'owner': 'Sway'
+    'owner_id': 1
 }
 
 owner_data = {
