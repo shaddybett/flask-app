@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 from flask_sqlalchemy import SQLAlchemy
 from models import db,Pet,Owner
 
@@ -16,5 +16,14 @@ def home():
 
 @app.route('/about')
 def about():
-    return 
+    pets_list = Pet.qury.all()
+    return render_template('about.html', pets = pets_list)
+
+@app.route('/owners')
+def owners():
+    owners_list = Owner.query.all()
+    return render_template('owners.html', owners = owners_list)
+
+__name__=='__main__'
+app.run(debug=True) 
 
