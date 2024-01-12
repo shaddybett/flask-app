@@ -16,7 +16,7 @@ def home():
 
 @app.route('/about')
 def about():
-    pets_list = Pet.qury.all()
+    pets_list = Pet.query.all()
     return render_template('about.html', pets = pets_list)
 
 @app.route('/owners')
