@@ -25,5 +25,5 @@ def owners():
     return render_template('owners.html', owners = owners_list)
 
 __name__=='__main__'
-app.run(debug=True) 
+app.run(debug=True,port=5555) 
 
