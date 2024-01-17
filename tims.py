@@ -7,10 +7,13 @@ api = Api(app)
 videos = {}
 
 class Video(Resource):
-    def put(self,video_id):
+    def get(self,video_id):
         return videos[video_id]
     
-api.add_resource(Video,'/video')
+    def put(self,video_id):
+        return {}
+    
+api.add_resource(Video,'/video/<int:video_id>')
 
 if __name__=='__main__':
     app.run(debug=True,port=5555)
