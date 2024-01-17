@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,request
 from flask_restful import Api,Resource
 
 app =Flask(__name__)
@@ -11,6 +11,7 @@ class Video(Resource):
         return videos[video_id]
     
     def put(self,video_id):
+        print(request.form)
         return {}
     
 api.add_resource(Video,'/video/<int:video_id>')
