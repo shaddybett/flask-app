@@ -6,7 +6,7 @@ api = Api(app)
 
 class HomePage(Resource):
     def get(self,name,age):
-        return {'name':'tim','age':20}
+        return {'name':name,'age':age}
     
 api.add_resource(HomePage,'/homepage/<string:name>/<int:age>')
 
