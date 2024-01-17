@@ -8,7 +8,7 @@ videos = {}
 
 class Video(Resource):
     def put(self,video_id):
-        return video_id
+        return videos[video_id]
     
 api.add_resource(Video,'/video')
 
