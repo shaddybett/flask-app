@@ -25,7 +25,8 @@ class Video(Resource):
         video_put_args.add_argument('likes',type=int,help='Likes required',required=True)
 
         args = video_put_args.parse_args()
-        return {video_id: args}
+        videos[video_id] = args
+        return videos[video_id],201
     
 api.add_resource(Video,'/video/<int:video_id>')
 
