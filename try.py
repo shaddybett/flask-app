@@ -13,10 +13,12 @@ headers = {'Content-Type': 'application/json'}
 for i in range(len(data)):
     response = requests.put(Base + 'video/' + str(i), json=data[i], headers=headers)
     print(response.json())
+input()
 
 # Fix the delete request to use the correct URL
 response = requests.delete(Base + 'video/0')
 print(response)
+input()
 
 # Fix the get request to use the correct URL and remove unnecessary parameters
 response = requests.get(Base + 'video/1', headers=headers)
