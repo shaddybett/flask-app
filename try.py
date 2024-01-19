@@ -13,7 +13,7 @@ for i in range(len(data)):
     print(response.json())
 
 response = requests.delete(Base + 'video/0')  
-print(response.json())  
+print(response)  
 input()
 response = requests.get(Base + 'video/1',json=data,headers=headers)
 print(response.json())
